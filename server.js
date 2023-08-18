@@ -20,7 +20,7 @@ app.get('/healthcheck', async (_req, res, _next) => {
 });
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret = "whsec_777392e863f031b2f6b893608c07919ec251d760fd743ece8cbc55260256f42c";
+const endpointSecret = process.env.ENDPOINT_SECRET;
 
 let storedPaymentObject = {};
 
